@@ -73,9 +73,16 @@ const products = [
 function HomeSection({ onNavigate }: { onNavigate: (s: Section) => void }) {
   return (
     <div className="space-y-6 pb-6">
-      {/* Hero */}
-      <section className="relative py-16 px-4 text-center">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-950/50 to-slate-950" />
+      {/* Hero with Knuamd Tower background */}
+      <section className="relative py-16 px-4 text-center overflow-hidden">
+        <img
+          src="https://scbcpwhzlgjrbhvfuzhy.supabase.co/storage/v1/object/public/scenes/KnuamdTowerduringtheDaytime.png"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 50%, rgba(15,23,42,0.95) 100%)'
+        }} />
         <div className="relative z-10 space-y-4">
           <h1 className="text-5xl font-extrabold">
             <span className="bg-gradient-to-r from-pink-400 via-rose-400 to-yellow-400 bg-clip-text text-transparent">
