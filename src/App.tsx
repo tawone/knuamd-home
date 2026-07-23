@@ -298,6 +298,17 @@ export default function App() {
     <div className="min-h-screen bg-slate-950 flex items-start justify-center">
       {/* Portrait phone frame */}
       <div className="relative w-full max-w-[min(430px,85vw)] min-h-screen text-white overflow-y-auto overflow-x-hidden pb-16 isolation isolate max-lg:rounded-none lg:rounded-3xl lg:my-4 lg:min-h-[calc(100vh-2rem)] lg:shadow-2xl lg:border lg:border-white/10">
+        {/* Topbar — Sign In / Sign Up */}
+        <div className="sticky top-0 z-40 bg-slate-950/90 backdrop-blur-md border-b border-white/8">
+          <div className="flex items-center justify-between px-4 py-2.5">
+            <span className="text-sm font-bold text-white tracking-tight">knuamd</span>
+            <div className="flex items-center gap-2">
+              <a href="https://pm.knuamd.com" className="text-[11px] text-white/50 hover:text-white px-2 py-1 rounded-md hover:bg-white/5 transition">Sign In</a>
+              <a href="https://pm.knuamd.com" className="text-[11px] font-semibold text-slate-950 bg-white hover:bg-white/90 px-3 py-1 rounded-md transition">Sign Up</a>
+            </div>
+          </div>
+        </div>
+
         {section === 'home' && <HomeSection onNavigate={setSection} />}
         {section === 'products' && <ProductsSection />}
         {section === 'ai' && <AIPreviewSection />}
